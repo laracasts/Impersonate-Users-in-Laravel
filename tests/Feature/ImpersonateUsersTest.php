@@ -30,6 +30,6 @@ class ImpersonateUsersTest extends TestCase
 
         $this->actingAs($admin)->get(route('impersonate', $user));
 
-        $this->assertEquals(auth()->user()->id, $user->id);
+        $this->assertEquals(auth()->id(), $user->id);
     }
 }
